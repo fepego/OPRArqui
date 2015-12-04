@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Formulario Arriendo</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+            <h:outputLabel value="Correo Electronico:"></h:outputLabel>
+            <input type="text" name="correo" value="#{controladorEventosArriendos.email}" size="40" /><br></br>
+            <h:outputLabel value="Tipo Tarjeta Credito"></h:outputLabel>
+            <h:selectOneMenu value="#{controladorEventosArriendos.tipoTarjeta}">
+                <f:selectItem itemValue="Master Card" itemLabel="Master Card"/>
+                <f:selectItem itemValue="VISA" itemLabel="VISA"/>
+            </h:selectOneMenu><br/>
+            <h:outputLabel value="Número tarjeta"></h:outputLabel>
+            <input type="text" name="NumTarjeta" value="#{controladorEventosArriendos.numeroTarjeta}" size="16"/><br/>
+            <h:outputLabel value="Nombre Tarjeta"></h:outputLabel>
+            <input type="text" name="nombre" value="#{controladorEventosArriendos.nombreCliente}" size="30" /><br/>
+            <h:outputLabel value="Mes Expiración"></h:outputLabel>
+            <h:selectOneMenu value="#{controladorEventosArriendos.mesExp}">
+                <f:selectItem itemValue="1" itemLabel="1"/>
+                <f:selectItem itemValue="2" itemLabel="2"/>
+                <f:selectItem itemValue="3" itemLabel="3"/>
+                <f:selectItem itemValue="4" itemLabel="4"/>
+                <f:selectItem itemValue="5" itemLabel="5"/>
+                <f:selectItem itemValue="6" itemLabel="6"/>
+                <f:selectItem itemValue="7" itemLabel="7"/>
+                <f:selectItem itemValue="8" itemLabel="8"/>
+                <f:selectItem itemValue="9" itemLabel="9"/>
+                <f:selectItem itemValue="10" itemLabel="10"/>
+                <f:selectItem itemValue="11" itemLabel="11"/>
+                <f:selectItem itemValue="12" itemLabel="12"/>
+            </h:selectOneMenu><br/>
+            <h:outputLabel value="Año Expiracion"></h:outputLabel>
+            <h:selectOneMenu value="#{controladorEventosArriendos.annoExp}">
+                <f:selectItem itemValue="2015" itemLabel="2015"/>
+                <f:selectItem itemValue="2016" itemLabel="2016"/>
+                <f:selectItem itemValue="2017" itemLabel="2017"/>
+                <f:selectItem itemValue="2018" itemLabel="2018"/>
+                <f:selectItem itemValue="2019" itemLabel="2019"/>
+            </h:selectOneMenu><br/>
+            <h:commandButton value="Regresar" action="#{controladorEventosArriendos.regresar()}"></h:commandButton> 
+            </h:form>
+        </f:view>
+        
+    </h:body>
+</html>
+

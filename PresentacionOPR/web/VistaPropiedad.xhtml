@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+
+
+
+                <h:form>
+                    <h:inputHidden 
+                    <h1><h:outputText value="List"/></h1>
+                    <h:dataTable  value="#{controladorVista.returnVisitingList()}" var="item">
+                      
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Direccion"/>
+                            </f:facet>
+                            <h:outputText value="#{item[2]}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Localidad"/>
+                            </f:facet>
+                            <h:outputText value="#{item[3]}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Tipopropiedad"/>
+                            </f:facet>
+                            <h:outputText value="#{item[4]}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Numerocuartos"/>
+                            </f:facet>
+                            <h:outputText value="#{item[5]}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Costo"/>
+                            </f:facet>
+                            <h:outputText value="#{item[6]}"/>
+                        </h:column>
+                        <h:column>
+                           <f:facet name="header">
+                                <h:outputText value="Accion"/>
+                    
+                            </f:facet>
+                            <h:form>
+                                <h:commandButton value="Rentar" action="#{controladorEventosArriendos.vistaArriendos}"></h:commandButton>
+                            </h:form>
+                            
+                        </h:column>
+                       
+                    </h:dataTable>
+                </h:form>
+
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
